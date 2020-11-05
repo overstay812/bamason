@@ -1,0 +1,21 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: cadetblue;
+    
+    
+}
+a {
+    color: cornsilk;
+    text-decoration: none;
+    margin: 0 20px;
+}
+a:hover {
+    color: rgb(213, 211, 202);
+}
+a:active {
+    color: rgb(181, 179, 173);
+}
