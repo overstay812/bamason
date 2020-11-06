@@ -8,6 +8,7 @@ const Login = ({ getAuthenticationData }) => {
 
   return (
     <div className={styles.login}>
+        {/* <span>Пожалуйста авторизуйтесь</span> */}
       <div className={styles.container}>
         <form className={styles.form}>
           <label htmlFor="name">Введите имя </label>

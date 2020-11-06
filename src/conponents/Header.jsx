@@ -9,7 +9,7 @@ const Header = ({isAuthorized}) => {
         <Link to={isAuthorized? "/books" : "/login"}>Книги</Link>
       </div>
       <div className={styles.toolbar}>
-        <Link to="/login">Log in</Link>
+  <Link to={isAuthorized? "/profile" : "/login"}>{isAuthorized? 'log out' : 'Log in'}</Link>
         <Link to={isAuthorized? "/profile" : "/login"}>Profile</Link>
       </div>
     </header>

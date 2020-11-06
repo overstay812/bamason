@@ -1,7 +1,7 @@
 const initialState = {
     login: 'admin',
     password: 'password',
-    isAuthorized: false
+    isAuthorized: localStorage['isAuthorized'] === undefined? false : JSON.parse(localStorage['isAuthorized']),
      
 }
 export const profileReducer = (state = initialState, action) => {
