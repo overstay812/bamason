@@ -1,10 +1,14 @@
-import { useState } from "react";
+import {  useState } from "react";
 import { connect } from "react-redux";
 import { getAuthenticationData } from "../../redux/profile/profileAction";
 import styles from "./Login.module.css";
-const Login = ({ getAuthenticationData }) => {
-  const [nameValue, setNameValue] = useState("");
-  const [passwordValue, setPasswordValue] = useState("");
+import { useHistory } from "react-router-dom";
+
+const Login = ({ getAuthenticationData, isAuthorized }) => {
+  const [nameValue, setNameValue] = useState("")
+  const [passwordValue, setPasswordValue] = useState("")
+  // const history = useHistory()
+  
 
   return (
     <div className={styles.login}>
@@ -26,10 +30,12 @@ const Login = ({ getAuthenticationData }) => {
             value={passwordValue}
             onChange={(event) => setPasswordValue(event.target.value)}
           />
+          
           <button
-            type="button"
             className={styles.button}
-            onClick={() => getAuthenticationData(nameValue, passwordValue)}
+            onClick={() => {
+              getAuthenticationData(nameValue, passwordValue) 
+            }}
           >
             Войти
           </button>
@@ -38,8 +44,12 @@ const Login = ({ getAuthenticationData }) => {
     </div>
   );
 };
-
+const mapStateToProps = state => {
+  return {
+    isAuthorized : state.profileReducer.isAuthorized
+  }
+ }
 const mapDispatchToProps = {
 getAuthenticationData
 };
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
