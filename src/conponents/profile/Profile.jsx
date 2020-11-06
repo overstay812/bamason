@@ -3,7 +3,7 @@ const Profile = () => {
   return (
     <div className={styles.container}>
       <h2>Добро пожаловать</h2>
-      <p>Константин Сурнин</p>
+      <p>Иван Смирнов </p>
     </div>
   );
 };
