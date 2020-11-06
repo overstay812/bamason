@@ -1,0 +1,51 @@
+
+.login{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+    border: 1px solid cadetblue;
+    border-radius: 10px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px dashed rgb(189, 187, 187);
+    padding-top: 20px;
+    text-align: center;
+
+}
+label{
+    margin: 0px;
+}
+.form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(189, 187, 187)
+}
+.name{
+    margin-bottom: 25px;
+}
+.button{
+    margin-top: 20px;
+    padding: 5px 15px;
+    background-color: cadetblue;
+    border: none;
+    border-radius: 5px;
+    color: cornsilk;
+}
+
+.button:hover {
+    background-color: rgb(94, 146, 147);
+}
+.button:active {
+    background-color: rgb(66, 102, 103);
+}
