@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import BooksItem from "./BookItem";
 import styles from "./Books.module.css";
 
 const Books = ({ booksArray }) => {
@@ -15,15 +16,9 @@ const Books = ({ booksArray }) => {
       {booksArray.map((item, index) => {
         if (index < pageNubmer * 5 || index >= pageNubmer * 5 + 5) {
           return null;
-        }
-        return (
-          <div className={styles.wrapper}>
-            <h4 className={styles.authorName}>
-              {index + 1} {item.author}
-            </h4>
-            <span className={styles.bookTitle}>{item.title}</span>
-          </div>
-        );
+        } else {
+          return <BooksItem {...item} index={index} key={`${item.title}${index}`}/>
+        } 
       })}
       
       <div className={styles.pagination}>

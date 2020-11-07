@@ -6,6 +6,9 @@ import Header from './conponents/Header'
 import Login from './conponents/login/Login'
 import Main from './conponents/main/Main';
 import Profile from './conponents/profile/Profile'
+import PropTypes from 'prop-types'
+
+
 function App({ booksArray, isAuthorized }) {
   return (
     <div className={styles.container}>
@@ -26,4 +29,12 @@ const mapStateToProps = state => {
     isAuthorized: state.profileReducer.isAuthorized
   }
 }
+
+App.propTypes = {
+ booksArray: PropTypes.array,
+ isAuthorized: PropTypes.bool
+}
+
 export default connect(mapStateToProps)(App)
+
+
