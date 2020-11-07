@@ -25,6 +25,7 @@ const Books = ({ booksArray }) => {
           </div>
         );
       })}
+      
       <div className={styles.pagination}>
         <button onClick={getPrevPage}>назад</button>
         <span className={styles.counterPages}>

@@ -9,3 +9,9 @@
     color: rgb(76, 73, 61);
     margin-top: 50px;
 }
+@media (max-width: 375px) {
+
+    .container {
+        font-size: 10px;
+    }
+}

@@ -5,16 +5,14 @@
   align-items: flex-start;
   padding: 30px 50px;
 }
-.wrapper {
-  border-bottom: 1px solid gray;
-}
+
 h4 {
   margin-bottom: 10px;
   font-size: 20px;
   color: rgb(83, 79, 65);
 }
-span {
-  font-size: 25px;
+.bookTitle {
+  font-size: 15px;
   margin-left: 15px;
 }
 h1 {
