@@ -1,7 +1,7 @@
 
 .login{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -13,6 +13,7 @@
     padding: 20px 30px;
     border: 1px solid cadetblue;
     border-radius: 10px;
+    margin-top: 40px;
 }
 
 input {
@@ -48,4 +49,23 @@ label{
 }
 .button:active {
     background-color: rgb(66, 102, 103);
+}
+span {
+    color: rgb(115, 114, 109);
+    margin-left: 0px;
+    font-size: 15px;
+}
+.tooltip{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    border: 3px solid cadetblue;
+    color: rgb(95, 93, 88);
+    border-radius: 20px;
+    
 }
